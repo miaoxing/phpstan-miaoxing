@@ -1,0 +1,17 @@
+{
+  "name": "miaoxing/phpstan-miaoxing",
+  "type": "phpstan-extension",
+  "description": "PHPStan Miaoxing extension",
+  "keywords": [
+    "miaoxing",
+    "phpstan"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "twinh",
+      "email": "twinhuang@qq.com"
+    }
+  ],
+  "require": {}
+}
