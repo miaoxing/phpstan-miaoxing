@@ -33,21 +33,21 @@ class WeiMethodExtension implements \PHPStan\Reflection\MethodsClassReflectionEx
 
     public function __construct()
     {
-        $alieses = wei()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
-        wei()->setAliases($alieses);
+        $alieses = \Wei\Wei::getContainer()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
+        \Wei\Wei::getContainer()->setAliases($alieses);
     }
 
     public function hasMethod(ClassReflection $classReflection, string $methodName): bool
     {
         return Wei::class === $classReflection->getName()
             && !method_exists(Wei::class, $methodName)
-            && \wei()->has($methodName)
-            && method_exists(\wei()->getClass($methodName), '__invoke');
+            && \Wei\Wei::getContainer()->has($methodName)
+            && method_exists(\Wei\Wei::getContainer()->getClass($methodName), '__invoke');
     }
 
     public function getMethod(ClassReflection $classReflection, string $methodName): MethodReflection
     {
-        $class = wei()->getClass($methodName);
+        $class = \Wei\Wei::getContainer()->getClass($methodName);
         $methodReflection = $this->broker->getClass($class)->getMethod('__invoke', new OutOfClassScope());
 
         // 如果返回值包含了 $this|static, 会被认为是 Wei，因此替换返回为当前类

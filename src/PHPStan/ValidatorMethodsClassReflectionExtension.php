@@ -28,15 +28,15 @@ class ValidatorMethodsClassReflectionExtension implements MethodsClassReflection
 
     public function __construct()
     {
-        $alieses = wei()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
-        wei()->setAliases($alieses);
+        $alieses = \Wei\Wei::getContainer()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
+        \Wei\Wei::getContainer()->setAliases($alieses);
     }
 
     public function hasMethod(ClassReflection $classReflection, string $methodName): bool
     {
         return 'Wei\V' === $classReflection->getName()
             && !method_exists('Wei\V', $methodName)
-            && \wei()->has('is' . ucfirst($methodName));
+            && \Wei\Wei::getContainer()->has('is' . ucfirst($methodName));
     }
 
     public function getMethod(ClassReflection $classReflection, string $methodName): MethodReflection
@@ -44,7 +44,7 @@ class ValidatorMethodsClassReflectionExtension implements MethodsClassReflection
         // 返回值使用当前类，即 Wei\V
         $returnType = new ObjectType($classReflection->getName());
 
-        $class = wei()->getClass('is' . ucfirst($methodName));
+        $class = \Wei\Wei::getContainer()->getClass('is' . ucfirst($methodName));
         $methodReflection = $this->broker->getClass($class)->getMethod('__invoke', new OutOfClassScope());
         $variants = $methodReflection->getVariants();
 
