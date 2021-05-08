@@ -10,34 +10,34 @@ parameters:
 
 services:
     -
-        class: Miaoxing\CodingStandards\PHPStan\ServiceMethodExtension
+        class: Miaoxing\PHPStan\ServiceMethodExtension
         tags:
             - phpstan.broker.methodsClassReflectionExtension
 
     -
-        class: Miaoxing\CodingStandards\PHPStan\WeiMethodExtension
+        class: Miaoxing\PHPStan\WeiMethodExtension
         tags:
             - phpstan.broker.methodsClassReflectionExtension
 
     -
-        class: Miaoxing\CodingStandards\PHPStan\ValidatorMethodsClassReflectionExtension
+        class: Miaoxing\PHPStan\ValidatorMethodsClassReflectionExtension
         tags:
             - phpstan.broker.methodsClassReflectionExtension
 
     -
-        class: Miaoxing\CodingStandards\PHPStan\WeiPropertyExtension
+        class: Miaoxing\PHPStan\WeiPropertyExtension
         tags:
             - phpstan.broker.propertiesClassReflectionExtension
 
     -
-        class: Miaoxing\CodingStandards\PHPStan\TraitMixinMethodsClassReflectionExtension
+        class: Miaoxing\PHPStan\TraitMixinMethodsClassReflectionExtension
         tags:
             - phpstan.broker.methodsClassReflectionExtension
         arguments:
               mixinExcludeClasses: %mixinExcludeClasses%
 
     -
-        class: Miaoxing\CodingStandards\PHPStan\TraitMixinPropertiesClassReflectionExtension
+        class: Miaoxing\PHPStan\TraitMixinPropertiesClassReflectionExtension
         tags:
           - phpstan.broker.propertiesClassReflectionExtension
         arguments:

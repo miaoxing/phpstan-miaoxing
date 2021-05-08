@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan\Reflection;
+namespace Miaoxing\PHPStan\Reflection;
 
 use PHPStan\Reflection\PropertyReflection;
 use PHPStan\Type\ObjectType;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan\Reflection;
+namespace Miaoxing\PHPStan\Reflection;
 
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\MethodReflection;

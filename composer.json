@@ -20,13 +20,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Miaoxing\\CodingStandards\\": "src",
+      "Miaoxing\\PHPStan\\": "src",
       "Wei\\": "src\\Wei"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PHPStanMiaoxingTest\\": "tests"
+      "MiaoxingTest\\PHPStan\\": "tests"
     }
   },
   "extra": {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan;
+namespace Miaoxing\PHPStan;
 
-use Miaoxing\CodingStandards\PHPStan\Reflection\ServiceMethodReflection;
+use Miaoxing\PHPStan\Reflection\ServiceMethodReflection;
 use PHPStan\Analyser\OutOfClassScope;
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\MethodReflection;

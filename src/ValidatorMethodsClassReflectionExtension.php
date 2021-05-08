@@ -1,8 +1,8 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan;
+namespace Miaoxing\PHPStan;
 
-use Miaoxing\CodingStandards\PHPStan\Reflection\WeiMethodReflection;
+use Miaoxing\PHPStan\Reflection\WeiMethodReflection;
 use PHPStan\Analyser\OutOfClassScope;
 use PHPStan\Broker\Broker;
 use PHPStan\Reflection\BrokerAwareExtension;

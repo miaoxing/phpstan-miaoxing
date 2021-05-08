@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPStanMiaoxingTest;
+namespace MiaoxingTest\PHPStan;
 
-use Miaoxing\CodingStandards\PHPStan\TraitMixinPropertiesClassReflectionExtension;
+use Miaoxing\PHPStan\TraitMixinPropertiesClassReflectionExtension;
 use PHPStan\Rules\Properties\AccessPropertiesRule;
 use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleLevelHelper;

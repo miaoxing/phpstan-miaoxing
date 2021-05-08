@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPStanMiaoxingTest;
+namespace MiaoxingTest\PHPStan;
 
-use Miaoxing\CodingStandards\PHPStan\TraitMixinMethodsClassReflectionExtension;
+use Miaoxing\PHPStan\TraitMixinMethodsClassReflectionExtension;
 use PHPStan\Php\PhpVersion;
 use PHPStan\Rules\FunctionCallParametersCheck;
 use PHPStan\Rules\Methods\CallMethodsRule;

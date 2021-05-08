@@ -1,8 +1,8 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan;
+namespace Miaoxing\PHPStan;
 
-use Miaoxing\CodingStandards\PHPStan\Reflection\WeiPropertyReflection;
+use Miaoxing\PHPStan\Reflection\WeiPropertyReflection;
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\PropertiesClassReflectionExtension;
 use PHPStan\Reflection\PropertyReflection;

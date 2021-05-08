@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPStanMiaoxingTest\Fixture;
+namespace MiaoxingTest\PHPStan\Fixture;
 
 class TestClass
 {

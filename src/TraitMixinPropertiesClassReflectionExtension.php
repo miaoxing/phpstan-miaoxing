@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\CodingStandards\PHPStan;
+namespace Miaoxing\PHPStan;
 
 use PHPStan\Analyser\OutOfClassScope;
 use PHPStan\Reflection\BrokerAwareExtension;
