@@ -24,6 +24,11 @@
       "Wei\\": "src\\Wei"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "PHPStanMiaoxingTest\\": "tests"
+    }
+  },
   "extra": {
     "phpstan": {
       "includes": [
