@@ -30,6 +30,9 @@
     }
   },
   "extra": {
+    "require-ci": {
+      "miaoxing/dev": "miaoxing/dev as 6.x-dev"
+    },
     "phpstan": {
       "includes": [
         "extension.neon"
