@@ -13,5 +13,22 @@
       "email": "twinhuang@qq.com"
     }
   ],
-  "require": {}
+  "require": {
+    "phpstan/phpstan": "^0.12.30",
+    "phpstan/phpstan-phpunit": "^0.12.11",
+    "phpstan/extension-installer": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\CodingStandards\\": "src",
+      "Wei\\": "src\\Wei"
+    }
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    }
+  }
 }

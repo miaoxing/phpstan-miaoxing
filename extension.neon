@@ -1,0 +1,44 @@
+includes:
+	- %rootDir%/conf/bleedingEdge.neon
+
+parameters:
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        # 用于快速判断赋值，例如 !$a && $a = 'xx';
+        - "#^Right side of (\\|\\||&&) is always (true|false)\\.$#"
+
+services:
+    -
+        class: Miaoxing\CodingStandards\PHPStan\ServiceMethodExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+
+    -
+        class: Miaoxing\CodingStandards\PHPStan\WeiMethodExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+
+    -
+        class: Miaoxing\CodingStandards\PHPStan\ValidatorMethodsClassReflectionExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+
+    -
+        class: Miaoxing\CodingStandards\PHPStan\WeiPropertyExtension
+        tags:
+            - phpstan.broker.propertiesClassReflectionExtension
+
+    -
+        class: Miaoxing\CodingStandards\PHPStan\TraitMixinMethodsClassReflectionExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+        arguments:
+              mixinExcludeClasses: %mixinExcludeClasses%
+
+    -
+        class: Miaoxing\CodingStandards\PHPStan\TraitMixinPropertiesClassReflectionExtension
+        tags:
+          - phpstan.broker.propertiesClassReflectionExtension
+        arguments:
+          mixinExcludeClasses: %mixinExcludeClasses%
