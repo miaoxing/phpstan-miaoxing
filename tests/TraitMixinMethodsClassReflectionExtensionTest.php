@@ -7,6 +7,7 @@ use PHPStan\Php\PhpVersion;
 use PHPStan\Rules\FunctionCallParametersCheck;
 use PHPStan\Rules\Methods\CallMethodsRule;
 use PHPStan\Rules\NullsafeCheck;
+use PHPStan\Rules\PhpDoc\UnresolvableTypeHelper;
 use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleLevelHelper;
 use PHPStan\Testing\RuleTestCase;
@@ -28,6 +29,8 @@ class TraitMixinMethodsClassReflectionExtensionTest extends RuleTestCase
                 $ruleLevelHelper,
                 new NullsafeCheck(),
                 new PhpVersion(\PHP_VERSION_ID),
+                new UnresolvableTypeHelper(true),
+                true,
                 true,
                 true,
                 true,
