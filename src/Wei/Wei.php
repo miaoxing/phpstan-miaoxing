@@ -222,7 +222,6 @@ namespace Wei {
             }
 
             if (!isset(static::$container)) {
-                /** @phpstan-ignore-next-line Unsafe usage of new static(). */
                 static::$container = new static($config);
             } else {
                 static::$container->setConfig($config);
