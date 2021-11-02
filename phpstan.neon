@@ -6,6 +6,7 @@ parameters:
 
     ignoreErrors:
       - "#^(.+?) is not covered by backward compatibility promise\\. The (class|method) might change in a minor PHPStan version\\.$#"
+      - "#^Unsafe usage of new static\\(\\)\\.$#"
 
     paths:
       - src
