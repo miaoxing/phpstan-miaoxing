@@ -81,7 +81,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
@@ -168,7 +168,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
@@ -231,7 +231,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
@@ -294,7 +294,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
@@ -357,7 +357,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
@@ -420,7 +420,7 @@ jobs:
           node-version: 14
 
       - name: Replace package dependencies
-        run: npx replace-pkg-dep composer.json
+        run: npx replace-pkg-dep composer.json main
 
       - name: Composer install
         run: |
