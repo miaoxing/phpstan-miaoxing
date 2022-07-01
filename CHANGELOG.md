@@ -1,3 +1,10 @@
+# [1.0.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v0.1.1...v1.0.0) (2022-07-01)
+
+
+### Features
+
+* 发布 1.0.0 [release 1.0.0] ([9c9828a](https://github.com/miaoxing/phpstan-miaoxing/commit/9c9828a8f9e9a27d25d26d9cb8e7a01e26e7f22e))
+
 ## [0.1.1](https://github.com/miaoxing/phpstan-miaoxing/compare/v0.1.0...v0.1.1) (2021-05-12)
 
 
