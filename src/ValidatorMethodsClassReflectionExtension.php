@@ -10,8 +10,9 @@ use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\FunctionVariant;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Reflection\MethodsClassReflectionExtension;
+use PHPStan\Reflection\Php\DummyParameter;
+use PHPStan\Type\MixedType;
 use PHPStan\Type\ObjectType;
-use Wei\V;
 
 /**
  * 允许通过 V::xxx()->xxx() 调用
@@ -47,12 +48,16 @@ class ValidatorMethodsClassReflectionExtension implements MethodsClassReflection
         $class = \Wei\Wei::getContainer()->getClass('is' . ucfirst($methodName));
         $methodReflection = $this->broker->getClass($class)->getMethod('__invoke', new OutOfClassScope());
         $variants = $methodReflection->getVariants();
-
         $variant = $variants[0];
 
-        // 首个参数是 $input, 需要移除掉
-        $parameters = $variant->getParameters();
-        array_shift($parameters);
+        // NOTE: $v 的方法有两种调用方式，暂时无法判断是哪种，使用假参数做兼容
+        $parameter = new DummyParameter('p', new MixedType(), true, null, false, null);
+        $parameters = [
+            $parameter,
+            $parameter,
+            $parameter,
+            $parameter,
+        ];
 
         $variants[0] = new FunctionVariant(
             $variant->getTemplateTypeMap(),
