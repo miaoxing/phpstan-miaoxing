@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.0.0...v1.1.0) (2022-08-02)
+
+
+### Features
+
+* **phpstan-miaoxing:** 兼容校验器的新调用方式 ([1a0dfc7](https://github.com/miaoxing/phpstan-miaoxing/commit/1a0dfc75db3c74178f76f3ebce2f324218494fad))
+
 # [1.0.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v0.1.1...v1.0.0) (2022-07-01)
 
 
