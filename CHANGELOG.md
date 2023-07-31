@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.1.0...v1.2.0) (2023-07-31)
+
+
+### Features
+
+* **classMap:** 同步 `classMap` 更新，支持多级继承的情况 ([df9bd6e](https://github.com/miaoxing/phpstan-miaoxing/commit/df9bd6e78800d667762ac15df77ccf8f0ca59f60))
+
 # [1.1.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.0.0...v1.1.0) (2022-08-02)
 
 
