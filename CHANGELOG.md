@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.2.0...v1.2.1) (2023-09-02)
+
+
+### Bug Fixes
+
+* **ClassMap:** 解决过滤重复类错误 ([b95cfca](https://github.com/miaoxing/phpstan-miaoxing/commit/b95cfcafdc79f520e1a0b430ced4ea0881d74259))
+
 # [1.2.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.1.0...v1.2.0) (2023-07-31)
 
 
