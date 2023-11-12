@@ -42,3 +42,9 @@ services:
           - phpstan.broker.propertiesClassReflectionExtension
         arguments:
           mixinExcludeClasses: %mixinExcludeClasses%
+
+    -
+        class: Miaoxing\PHPStan\ModelReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+            - phpstan.broker.dynamicStaticMethodReturnTypeExtension
