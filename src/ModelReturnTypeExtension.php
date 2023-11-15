@@ -81,7 +81,12 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
         if ($returnType instanceof UnionType) {
             $types = [];
             foreach ($returnType->getTypes() as $type) {
-                $types[] = $this->replaceType($methodCall, $scope, $type);
+                $newType = $this->replaceType($methodCall, $scope, $type);
+                if ($newType instanceof UnionType) {
+                    $types = array_merge($types, $newType->getTypes());
+                } else {
+                    $types[] = $newType;
+                }
             }
             return new UnionType($types);
         }
