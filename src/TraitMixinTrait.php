@@ -34,6 +34,9 @@ trait TraitMixinTrait
     private function getTraitClassesDeep(string $class)
     {
         $traits = class_uses($class);
+        if (!$traits) {
+            return [];
+        }
 
         // Get traits of all parent traits
         $traitsToSearch = $traits;
