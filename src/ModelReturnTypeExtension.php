@@ -42,6 +42,7 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
         return $this->isServiceMethod($methodReflection);
     }
 
+    #[\ReturnTypeWillChange]
     public function getTypeFromMethodCall(
         MethodReflection $methodReflection,
         MethodCall       $methodCall,
