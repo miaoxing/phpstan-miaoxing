@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.2.1...v2.0.0) (2023-11-30)
+
+
+### Bug Fixes
+
+* **phpstan:** error when class not has no traits ([d66421c](https://github.com/miaoxing/phpstan-miaoxing/commit/d66421c264bc0f8c015c5ef18ce2486d79c0ada2)), closes [#1](https://github.com/miaoxing/miaoxing/issues/1)
+* **phpstan-miaoxing:** Union 类型不能嵌套 ([b9d7bcb](https://github.com/miaoxing/phpstan-miaoxing/commit/b9d7bcb044f5874a3009a249a1dba51954782c6b))
+
+
+### Features
+
+* **phpstan:** upgrade phpstan to 1.x ([58b4ca9](https://github.com/miaoxing/phpstan-miaoxing/commit/58b4ca9cb7975970277e85abf646675325c50c2f))
+* **phpstan-miaoxing:** 增加 `ModelReturnTypeExtension` 扩展，解决 Model 返回值被 PHPStan 识别为 `ModelTrait` 的问题 ([922d611](https://github.com/miaoxing/phpstan-miaoxing/commit/922d611968048a1967a5405b0b19d4574e6a0015))
+
+
+### BREAKING CHANGES
+
+* **phpstan:** upgrade phpstan to 1.x
+
 ## [1.2.1](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.2.0...v1.2.1) (2023-09-02)
 
 
