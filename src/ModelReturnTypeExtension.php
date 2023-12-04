@@ -45,10 +45,9 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
     #[\ReturnTypeWillChange]
     public function getTypeFromMethodCall(
         MethodReflection $methodReflection,
-        MethodCall       $methodCall,
-        Scope            $scope
-    ): ?Type
-    {
+        MethodCall $methodCall,
+        Scope $scope
+    ): ?Type {
         return $this->replaceReturnType($methodReflection, $methodCall, $scope);
     }
 
@@ -59,19 +58,17 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
 
     public function getTypeFromStaticMethodCall(
         MethodReflection $methodReflection,
-        StaticCall       $methodCall,
-        Scope            $scope
-    ): ?Type
-    {
+        StaticCall $methodCall,
+        Scope $scope
+    ): ?Type {
         return $this->replaceReturnType($methodReflection, $methodCall, $scope);
     }
 
     private function replaceReturnType(
         MethodReflection $methodReflection,
-        CallLike         $methodCall,
-        Scope            $scope
-    )
-    {
+        CallLike $methodCall,
+        Scope $scope
+    ) {
         $variant = ParametersAcceptorSelector::selectFromArgs(
             $scope,
             $methodCall->getArgs(),
@@ -104,7 +101,8 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
     private function replaceType(CallLike $methodCall, Scope $scope, Type $type)
     {
         if ($this->isModelTrait($type)) {
-            return $methodCall instanceof StaticCall ? $this->getModelType($methodCall, $scope) : $this->getVarType($methodCall, $scope);
+            return $methodCall instanceof StaticCall ?
+                $this->getModelType($methodCall, $scope) : $this->getVarType($methodCall, $scope);
         } else {
             return $type;
         }
@@ -128,7 +126,7 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
 
     private function isModelTrait($returnType): bool
     {
-        return $returnType instanceof ObjectType && $returnType->getClassName() === ModelTrait::class;
+        return $returnType instanceof ObjectType && ModelTrait::class === $returnType->getClassName();
     }
 
     private function isServiceMethod(MethodReflection $methodReflection): bool
