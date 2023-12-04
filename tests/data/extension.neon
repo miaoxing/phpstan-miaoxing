@@ -1,0 +1,14 @@
+services:
+    -
+        class: Miaoxing\PHPStan\TraitMixinMethodsClassReflectionExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+        arguments:
+              mixinExcludeClasses: %mixinExcludeClasses%
+
+    -
+        class: Miaoxing\PHPStan\TraitMixinPropertiesClassReflectionExtension
+        tags:
+          - phpstan.broker.propertiesClassReflectionExtension
+        arguments:
+          mixinExcludeClasses: %mixinExcludeClasses%
