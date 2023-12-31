@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/miaoxing/phpstan-miaoxing/compare/v2.0.0...v2.0.1) (2023-12-31)
+
+
+### Bug Fixes
+
+* **ClassMap:** 类重复时，记录类名错误 ([eddce0c](https://github.com/miaoxing/phpstan-miaoxing/commit/eddce0c9513ebd25b325b6753c9b070ec5619c19))
+* **phpstan-miaoxing:** remove bleedingEdge config, only contains release rules ([03b14d8](https://github.com/miaoxing/phpstan-miaoxing/commit/03b14d897314c09a4b5d6549a76c6abdfb6274b2))
+
 # [2.0.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v1.2.1...v2.0.0) (2023-11-30)
 
 
