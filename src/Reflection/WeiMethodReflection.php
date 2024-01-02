@@ -5,7 +5,7 @@ namespace Miaoxing\PHPStan\Reflection;
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\MethodReflection;
 
-class WeiMethodReflection implements \PHPStan\Reflection\MethodReflection
+class WeiMethodReflection implements MethodReflection
 {
     /**
      * @var string
@@ -18,7 +18,7 @@ class WeiMethodReflection implements \PHPStan\Reflection\MethodReflection
     protected $methodReflection;
 
     /**
-     * @var \PHPStan\Reflection\ClassReflection
+     * @var ClassReflection
      */
     protected $class;
 

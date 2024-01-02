@@ -19,20 +19,20 @@ class WeiPropertyExtension implements PropertiesClassReflectionExtension
 {
     public function __construct()
     {
-        $alieses = \Wei\Wei::getContainer()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
-        \Wei\Wei::getContainer()->setAliases($alieses);
+        $alieses = Wei::getContainer()->classMap->generate(['src', 'plugins/*/src'], '/Service/*.php', 'Service');
+        Wei::getContainer()->setAliases($alieses);
     }
 
     public function hasProperty(ClassReflection $classReflection, string $propertyName): bool
     {
         return Wei::class === $classReflection->getName()
             && !property_exists(Wei::class, $propertyName)
-            && \Wei\Wei::getContainer()->has($propertyName);
+            && Wei::getContainer()->has($propertyName);
     }
 
     public function getProperty(ClassReflection $classReflection, string $propertyName): PropertyReflection
     {
-        $class = \Wei\Wei::getContainer()->getClass($propertyName);
+        $class = Wei::getContainer()->getClass($propertyName);
         return new WeiPropertyReflection(new ObjectType($class), $classReflection);
     }
 }
