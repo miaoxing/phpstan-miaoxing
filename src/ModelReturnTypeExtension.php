@@ -14,8 +14,6 @@ use PHPStan\Type\DynamicStaticMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
 use PHPStan\Type\UnionType;
-use Wei\BaseModel;
-use Wei\ModelTrait;
 
 /**
  * Update model return type from 'ModelTrait' to real Model class
@@ -34,7 +32,7 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
 {
     public function getClass(): string
     {
-        return BaseModel::class;
+        return 'Wei\BaseModel';
     }
 
     public function isMethodSupported(MethodReflection $methodReflection): bool
@@ -126,7 +124,7 @@ class ModelReturnTypeExtension implements DynamicMethodReturnTypeExtension, Dyna
 
     private function isModelTrait($returnType): bool
     {
-        return $returnType instanceof ObjectType && ModelTrait::class === $returnType->getClassName();
+        return $returnType instanceof ObjectType && 'Wei\ModelTrait' === $returnType->getClassName();
     }
 
     private function isServiceMethod(MethodReflection $methodReflection): bool
