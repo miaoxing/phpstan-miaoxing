@@ -6,9 +6,9 @@ use PHPStan\Testing\TypeInferenceTestCase;
 
 class TraitMixinClassReflectionExtensionTest extends TypeInferenceTestCase
 {
-    public function dataFileAsserts(): iterable
+    public static function dataFileAsserts(): iterable
     {
-        yield from $this->gatherAssertTypes(__DIR__ . '/Fixture/TestClass.php');
+        yield from static::gatherAssertTypes(__DIR__ . '/Fixture/TestClass.php');
     }
 
     /**
