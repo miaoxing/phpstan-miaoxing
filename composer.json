@@ -20,8 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Miaoxing\\PHPStan\\": "src",
-      "Wei\\": "src\\Wei"
+      "Miaoxing\\PHPStan\\": "src"
     }
   },
   "autoload-dev": {
@@ -36,7 +35,8 @@
   },
   "extra": {
     "require-ci": {
-      "miaoxing/dev": "miaoxing/dev as 8.x-dev"
+      "miaoxing/dev": "miaoxing/dev as 8.x-dev",
+      "wei/wei": "twinh/wei as 0.17.x-dev"
     },
     "phpstan": {
       "includes": [
