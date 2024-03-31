@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/miaoxing/phpstan-miaoxing/compare/v2.0.1...v3.0.0) (2024-03-31)
+
+
+### Features
+
+* **phpstan-miaoxing:** `wei/wei` 类库改为需手动安装 ([3fbc8d3](https://github.com/miaoxing/phpstan-miaoxing/commit/3fbc8d3af21f9344073be16eff1f0392aea9ecd8))
+
+
+### BREAKING CHANGES
+
+* **phpstan-miaoxing:** `wei/wei` 类库改为需手动安装
+
 ## [2.0.1](https://github.com/miaoxing/phpstan-miaoxing/compare/v2.0.0...v2.0.1) (2023-12-31)
 
 
