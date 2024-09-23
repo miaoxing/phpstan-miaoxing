@@ -4,6 +4,7 @@ namespace MiaoxingTest\PHPStan\Fixture;
 
 use function PHPStan\Testing\assertType;
 
+#[\AllowDynamicProperties]
 class TestClass
 {
     use TestTrait;
