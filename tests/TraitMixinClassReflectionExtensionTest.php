@@ -6,11 +6,6 @@ use PHPStan\Testing\TypeInferenceTestCase;
 
 class TraitMixinClassReflectionExtensionTest extends TypeInferenceTestCase
 {
-    public static function dataFileAsserts(): iterable
-    {
-        yield from static::gatherAssertTypes(__DIR__ . '/Fixture/TestClass.php');
-    }
-
     /**
      * @dataProvider dataFileAsserts
      * @param mixed ...$args
@@ -21,6 +16,11 @@ class TraitMixinClassReflectionExtensionTest extends TypeInferenceTestCase
         ...$args
     ): void {
         $this->assertFileAsserts($assertType, $file, ...$args);
+    }
+
+    public static function dataFileAsserts(): iterable
+    {
+        yield from static::gatherAssertTypes(__DIR__ . '/Fixture/TestClass.php');
     }
 
     public static function getAdditionalConfigFiles(): array
